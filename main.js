@@ -10,6 +10,6 @@ app.get('/about', (requ, resp) => {
     resp.send('<h1>About Us</h1><p>This is the about page.</p>');
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000);
 
-console.log('Server is running on http://localhost:3000');
+console.log('Server is running on ' + (process.env.PORT || 3000));
